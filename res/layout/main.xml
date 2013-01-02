@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
-	android:id="@android:id/tabhost" android:layout_width="match_parent"
-	android:layout_height="match_parent">
+<TabHost android:id="@android:id/tabhost" android:layout_width="match_parent"
+	android:layout_height="match_parent" xmlns:android="http://schemas.android.com/apk/res/android">
 	
 	<LinearLayout android:orientation="vertical"
 		android:layout_width="match_parent" android:layout_height="match_parent">
@@ -22,23 +21,6 @@
 	android:layout_width="match_parent" android:layout_height="match_parent">
 
 			<LinearLayout
-			    android:id="@+id/tab1"
-			    android:layout_width="match_parent"
-			    android:layout_height="wrap_content"
-			    android:orientation="vertical" >
-
-				<TextView
-				    android:id="@+id/textView1"
-				    android:layout_width="match_parent"
-				    android:layout_height="wrap_content"
-				    android:gravity="center"
-				    android:text="SferaDev"
-				    android:textAppearance="?android:attr/textAppearanceLarge"
-				    android:textSize="30sp" />
-
-			</LinearLayout>
-
-			<LinearLayout
 			    android:id="@+id/tab2"
 			    android:layout_width="match_parent"
 			    android:layout_height="wrap_content"
@@ -50,20 +32,56 @@
 			        android:layout_height="match_parent" />
 			</LinearLayout>
 
-			<LinearLayout
+			<ScrollView
 			    android:id="@+id/tab3"
-			    android:layout_width="match_parent"
-			    android:layout_height="wrap_content"
-			    android:orientation="vertical" >
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content" >
 
-				<TextView
-				    android:id="@+id/textView2"
-				    android:layout_width="wrap_content"
-				    android:layout_height="wrap_content"
-				    android:text="About"
-				    android:textAppearance="?android:attr/textAppearanceLarge" />
+			    <LinearLayout
+			        android:id="@+id/linearlayout"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical" >
 
-			</LinearLayout>
+			        <TextView
+			            android:id="@+id/textView1"
+			            android:layout_width="fill_parent"
+			            android:layout_height="fill_parent"
+			            android:layout_marginLeft="10dp"
+			            android:layout_marginRight="10dp"
+			            android:gravity="center"
+			            android:text="@string/about_title"
+			            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+			        <TextView
+			            android:id="@+id/textView3"
+			            android:layout_width="fill_parent"
+			            android:layout_height="wrap_content"
+			            android:layout_margin="10dp"
+			            android:layout_marginRight="5dp"
+			            android:text="@string/copyright"
+			            android:textAppearance="?android:attr/textAppearanceLarge"
+			            android:textSize="15sp" />
+
+			        <TextView
+			            android:id="@+id/textView4"
+			            android:layout_width="match_parent"
+			            android:layout_height="match_parent"
+			            android:layout_margin="10dp"
+			            android:text="@string/text_about"
+			            android:textAppearance="?android:attr/textAppearanceMedium"
+			            android:textSize="15sp" />
+
+			        <TextView
+			            android:id="@+id/textView2"
+			            android:layout_width="fill_parent"
+			            android:layout_height="wrap_content"
+			            android:layout_margin="10dp"
+			            android:text="@string/thanks"
+			            android:textAppearance="?android:attr/textAppearanceLarge"
+			            android:textSize="15sp" />
+			    </LinearLayout>
+			</ScrollView>
 			
 		</FrameLayout>
 

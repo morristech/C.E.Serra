@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="appname">C. E. Serra</string>
+    <string name="donate">DONAR</string>
+    <string name="about_title">Acerca de</string>
+    <string name="thanks">Gracias por probar mi utilidad y no te olvides de buscar el resto de mis aplicaciones.</string>
+    <string name="text_about">Si quieres ayudar a mis proyectos por favor utiliza el botón de donaciones para ser redirigido a la versión Donate de la aplicación en Google Play.</string>
+    <string name="copyright">La utilidad de navegación está completamente basada en los datos disponibles en clicked.coleserra.net. No está autorizada oficialmente por C. E. Serra y no se guardaran datos en tu dispositivo.</string>
+
+</resources>
