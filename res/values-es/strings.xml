@@ -4,7 +4,7 @@
     <string name="appname">C. E. Serra</string>
     <string name="about">Acerca de</string>
     <string name="about_title">Acerca de C.E. Serra</string>
-    <string name="about_text">La utilidad de navegación está completamente basada en los datos disponibles en clicked.coleserra.net. No está autorizada oficialmente por C. E. Serra y no se guardaran datos en tu dispositivo.</string>
+    <string name="about_text">La utilidad de navegación está completamente basada en los datos disponibles en clickedu.coleserra.net. No está autorizada oficialmente por C. E. Serra y no se guardaran datos en tu dispositivo.</string>
 	<string name="about_donations">Las donaciones no ofrecen ninguna mejora respecto al producto gratuito, unicamente contribuyen a la labor del desarrollador. La aplicación seguira siendo gratuita aun si no contribuyes con tus donaciones. </string>
     
 </resources>

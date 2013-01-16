@@ -1,5 +1,8 @@
 package org.sferadev.clickedu.serra;
 
+import org.sferadev.clickedu.serra.R;
+import org.sferadev.clickedu.serra.R.layout;
+
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
@@ -18,7 +21,7 @@ public class AboutActivity extends Activity {
 	    }
 	
     public void click_xda(View v) {
-        String url = "https://github.com/SferaDev/Multiple-Task-Manager";
+        String url = "https://github.com/SferaDev/C.E.Serra";
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));
         startActivity(i);
