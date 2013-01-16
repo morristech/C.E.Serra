@@ -2,12 +2,19 @@ package org.sferadev.clickedu.serra;
 
 import java.lang.reflect.Field;
 
+import org.sferadev.clickedu.serra.AboutActivity;
+import org.sferadev.clickedu.serra.R;
+
+import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.TabActivity;
+import android.content.Intent;
 
 import android.view.KeyEvent;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewConfiguration;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -15,13 +22,10 @@ import android.webkit.WebViewClient;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 
-public class SerraActivity extends TabActivity {
+public class SerraActivity extends Activity {
 
 	WebView webview2;
 	WebSettings websettings2;
-	TabHost host;
-	TabSpec spec2;
-	TabSpec spec3;
 
 	public void onBackPressed (){
 
@@ -34,17 +38,21 @@ public class SerraActivity extends TabActivity {
 	    }
 	    
 	}
-
+	
+	@Override
+	public boolean onKeyLongPress( int keyCode, KeyEvent event ) {
+		if( keyCode == KeyEvent.KEYCODE_BACK ) {
+			super.finish();
+			return true;
+		}
+		return super.onKeyLongPress(keyCode, event);
+	}
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		host = (TabHost)findViewById(android.R.id.tabhost);
 		
-		spec2 = host.newTabSpec("tab2");
-        spec2.setContent(R.id.tab2);
-        spec2.setIndicator("Clickedu");
-        host.addTab(spec2);
         webview2 = (WebView) this.findViewById(R.id.webview);
         websettings2 = webview2.getSettings();
         websettings2.setJavaScriptEnabled(true);
@@ -52,32 +60,7 @@ public class SerraActivity extends TabActivity {
         webview2.loadUrl("http://clickedu.coleserra.net/m/m_user.php");
         webview2.setWebViewClient(new InsideWebViewClient2());
         
-		
-        
-        spec3 = host.newTabSpec("tab3");
-        spec3.setContent(R.id.tab3);
-        spec3.setIndicator("About");
-        host.addTab(spec3);
-        
-        }
-	
-
-	private void getOverflowMenu() {
-		
-		try {
-			ViewConfiguration config = ViewConfiguration.get(this);
-			Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermamentMenuKey");
-			if(menuKeyField != null){
-				menuKeyField.setAccessible(true);
-				menuKeyField.setBoolean(config, false);
-			}
-		} catch (Exception e){
-			e.printStackTrace();
-		}
 	}
-	
-
-
 	
     private class InsideWebViewClient2 extends WebViewClient {
     	public boolean shouldOverrideUrlLoading(WebView view, String url1) {
@@ -87,9 +70,6 @@ public class SerraActivity extends TabActivity {
     	
     }
     
-   
-	
-    
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -97,4 +77,21 @@ public class SerraActivity extends TabActivity {
 		return true;
 	}
 
+	@Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+           case R.id.exit:
+                finish();
+                return true;
+                
+           case R.id.about:
+   			Intent intent = new Intent(this, AboutActivity.class);
+   	        this.startActivity(intent);
+   	        break;
+   			
+   		}
+        
+        return false;
+    }
+	
 }

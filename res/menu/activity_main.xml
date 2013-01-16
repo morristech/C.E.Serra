@@ -1,5 +1,5 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item android:id="@+id/donate" android:title="DONATE" android:showAsAction="always|withText"></item>
-    <item android:id="@+id/item1" android:title="F.C.B" android:showAsAction="never|withText|collapseActionView"></item>
+    <item android:id="@+id/exit" android:showAsAction="always" android:icon="@drawable/ic_menu_close_clear_cancel" android:title="Exit" android:orderInCategory="2"></item>
+    <item android:id="@+id/about" android:orderInCategory="1" android:title="About" android:showAsAction="ifRoom"></item>
 
 </menu>

@@ -2,10 +2,9 @@
 <resources>
 
     <string name="appname">C. E. Serra</string>
-    <string name="donate">DONACIÓ</string>
-    <string name="about_title">Sobre la aplicació</string>
-    <string name="thanks">Moltes gracies per provar la meva utilitat i no t’oblidis de buscar la resta de les meves aplicacions.</string>
-    <string name="text_about">Si voleu suportar el meu treball si us plau utilitzeu el boto Donatiu per ser redirigits a la versió Donate de la aplicació a Google Play.</string>
-    <string name="copyright">Aquesta utilitat de desplaçament esta completament basada en les dades disponibles a clickedu.coleserra.net. No esta autoritzada de forma oficial per el C. E. Serra i no és guardaran dades al teu dispositiu.</string>
-
+    <string name="about">Sobre</string>
+    <string name="about_title">Sobre C.E. Serra</string>
+    <string name="about_text">Aquesta utilitat de desplaçament esta completament basada en les dades disponibles a clickedu.coleserra.net. No esta autoritzada de forma oficial per el C. E. Serra i no és guardaran dades al teu dispositiu.</string>
+    <string name="about_donations">Les donacions a PayPal no donen ninguna millora o actualització, unicament agraeixen el treball del desenvolupador. La aplicació seguira sent gratuita sense la necessitat de donar.</string>
+    
 </resources>

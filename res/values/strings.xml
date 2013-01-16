@@ -2,10 +2,11 @@
 <resources>
 
     <string name="appname">C. E. Serra</string>
-    <string name="donate">DONATE</string>
-    <string name="about_title">About</string>
-    <string name="thanks">Thanks for using the utility and make sure to test my other apps.</string>
-    <string name="text_about">If you want to give support please use the Donate button to be redirected to the Donate version of the App in Google Play.</string>
-    <string name="copyright">This navigation tool is completely based on the data available in clickedu.coleserra.net. It is not officially authorized by C. E. Serra and no data is going to be downloaded on your device. </string>
+    <string name="about">About</string>
+    <string name="about_title">About C.E. Serra</string>
+    <string name="about_text">This navigation tool is completely based on the data available in clickedu.coleserra.net. It is not officially authorized by C. E. Serra and no data is going to be downloaded on your device. </string>
+    <string name="button_github">OpenSource at GitHub</string>
+    <string name="button_paypal">Support the project at PayPal</string>
+    <string name="about_donations">PayPal donations do not grant any upgrade or improve, they just support the work of the developer. App will remain free without donating.</string>
 
 </resources>
